@@ -39,9 +39,10 @@ void Print2DArray(int[,] array)
 int ChangeArray(int[,] array)
 {
     int sum = 0;
-    int minLength = array.GetLength(0);
+/*    int minLength = array.GetLength(0);
     if (array.GetLength(1) < array.GetLength(0))
-        minLength = array.GetLength(1);
+        minLength = array.GetLength(1); */
+    int minLength = array.GetLength(0) > array.GetLength(1) ? array.GetLength(1) : array.GetLength(0);
     for (int i = 0; i < minLength; i++)
     {
         sum += array[i, i];
